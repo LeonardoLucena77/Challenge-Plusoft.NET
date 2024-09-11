@@ -1,0 +1,6 @@
+@Challenge_Plusoft.NET_HostAddress = http://localhost:5032
+
+GET {{Challenge_Plusoft.NET_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
