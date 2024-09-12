@@ -1,8 +1,6 @@
 using PlusoftRecommender.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using PlusoftRecommender.Repositories;
-
 
 namespace PlusoftRecommender.Repositories
 {

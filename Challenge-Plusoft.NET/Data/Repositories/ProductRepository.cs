@@ -3,7 +3,6 @@ using PlusoftRecommender.Data;
 using PlusoftRecommender.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using PlusoftRecommender.Repositories;
 
 namespace PlusoftRecommender.Repositories
 {
@@ -18,16 +17,12 @@ namespace PlusoftRecommender.Repositories
 
         public async Task<IEnumerable<Product>> GetAllProductsAsync()
         {
-            return await _context.Products
-                .Include(p => p.Category)
-                .ToListAsync();
+            return await _context.Products.ToListAsync();
         }
 
         public async Task<Product> GetProductByIdAsync(int id)
         {
-            return await _context.Products
-                .Include(p => p.Category)
-                .FirstOrDefaultAsync(p => p.Id == id);
+            return await _context.Products.FirstOrDefaultAsync(p => p.Id == id);
         }
 
         public async Task AddProductAsync(Product product)
